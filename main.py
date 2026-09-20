@@ -1,9 +1,13 @@
 """run form here"""
 
 from hr_assistant.pipeline import ask, build_hr_assistant
+from hr_assistant.logger import get_logger
+
+
+logger = get_logger(__name__)
 
 def main():
-    print("Building the HR policy assistant")
+    logger.info("Building the HR policy assistant")
     agent = build_hr_assistant()
 
     demo_questions = [

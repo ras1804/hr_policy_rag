@@ -1,0 +1,60 @@
+2026-09-20 10:36:54,908 | INFO | __main__ | Building the HR policy assistant
+2026-09-20 10:36:54,908 | INFO | hr_assistant.pipeline | Building HR assistant
+2026-09-20 10:36:54,908 | INFO | hr_assistant.pipeline | Vector Store already exists
+2026-09-20 10:36:54,908 | INFO | hr_assistant.vector_store | Loading FAISS index from 'faiss_index'
+2026-09-20 10:36:54,908 | INFO | hr_assistant.embeddings | Initializing the embedding model jina-embeddings-v2-base-en
+2026-09-20 10:36:54,950 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-09-20 10:36:54,950 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-09-20 10:36:54,950 | INFO | faiss.loader | Loading faiss.
+2026-09-20 10:36:54,979 | INFO | faiss.loader | Successfully loaded faiss.
+2026-09-20 10:36:54,994 | INFO | hr_assistant.vector_store | Creating a retriever with top_k=3
+2026-09-20 10:36:54,997 | INFO | hr_assistant.llm | Initializing LLM openai/gpt-oss-20b
+2026-09-20 10:36:55,282 | INFO | hr_assistant.agent | Creating an HR agent with 1 tools
+2026-09-20 10:36:55,282 | INFO | hr_assistant.agent | HR agent ready
+2026-09-20 10:36:55,282 | INFO | hr_assistant.pipeline | HR assistant is ready to take questions
+2026-09-20 10:36:55,282 | INFO | hr_assistant.pipeline | User question: How many paid annual leaves do I get?
+2026-09-20 10:36:57,659 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 10:36:57,681 | INFO | hr_assistant.tools | search_hr_policy called with query: How many paid annual leaves do I get?
+2026-09-20 10:37:06,309 | INFO | hr_assistant.tools | Found 3 matching chunks
+2026-09-20 10:37:07,097 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 10:37:07,104 | INFO | hr_assistant.pipeline | User question: What is the notice period during probation?
+2026-09-20 10:37:07,581 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 10:37:07,581 | INFO | hr_assistant.tools | search_hr_policy called with query: notice period during probation
+2026-09-20 10:37:14,986 | INFO | hr_assistant.tools | Found 3 matching chunks
+2026-09-20 10:37:15,742 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 10:37:15,748 | INFO | hr_assistant.pipeline | User question: Can I work form home every day?
+2026-09-20 10:37:16,372 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 10:37:16,374 | INFO | hr_assistant.tools | search_hr_policy called with query: work from home policy
+2026-09-20 10:37:17,034 | INFO | hr_assistant.tools | Found 3 matching chunks
+2026-09-20 10:37:17,665 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 10:42:19,801 | INFO | __main__ | Building the HR policy assistant
+2026-09-20 10:42:19,801 | INFO | hr_assistant.pipeline | Building HR assistant
+2026-09-20 10:42:19,801 | INFO | hr_assistant.pipeline | Vector Store already exists
+2026-09-20 10:42:19,801 | INFO | hr_assistant.vector_store | Loading FAISS index from 'faiss_index'
+2026-09-20 10:42:19,801 | INFO | hr_assistant.embeddings | Initializing the embedding model jina-embeddings-v2-base-en
+2026-09-20 10:42:19,835 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-09-20 10:42:19,835 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-09-20 10:42:19,835 | INFO | faiss.loader | Loading faiss.
+2026-09-20 10:42:19,864 | INFO | faiss.loader | Successfully loaded faiss.
+2026-09-20 10:42:19,874 | INFO | hr_assistant.vector_store | Creating a retriever with top_k=3
+2026-09-20 10:42:19,878 | INFO | hr_assistant.llm | Initializing LLM openai/gpt-oss-20b
+2026-09-20 10:42:20,083 | INFO | hr_assistant.agent | Creating an HR agent with 1 tools
+2026-09-20 10:42:20,087 | INFO | hr_assistant.agent | HR agent ready
+2026-09-20 10:42:20,087 | INFO | hr_assistant.pipeline | HR assistant is ready to take questions
+2026-09-20 10:42:20,087 | INFO | hr_assistant.pipeline | User question: How many paid annual leaves do I get?
+2026-09-20 10:42:22,204 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 10:42:22,224 | INFO | hr_assistant.tools | search_hr_policy called with query: How many paid annual leaves do I get?
+2026-09-20 10:42:24,308 | INFO | hr_assistant.tools | Found 3 matching chunks
+2026-09-20 10:42:24,977 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 10:42:24,979 | INFO | hr_assistant.pipeline | User question: What is the notice period during probation?
+2026-09-20 10:42:26,784 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 10:42:26,787 | INFO | hr_assistant.tools | search_hr_policy called with query: notice period during probation
+2026-09-20 10:42:31,173 | INFO | hr_assistant.tools | Found 3 matching chunks
+2026-09-20 10:42:33,993 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 10:42:33,994 | INFO | hr_assistant.pipeline | User question: Can I work form home every day?
+2026-09-20 10:42:34,655 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 10:42:34,655 | INFO | hr_assistant.tools | search_hr_policy called with query: work from home policy
+2026-09-20 10:42:35,801 | INFO | hr_assistant.tools | Found 3 matching chunks
+2026-09-20 10:42:36,882 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"

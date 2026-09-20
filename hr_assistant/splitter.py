@@ -4,9 +4,11 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from hr_assistant import config
 from hr_assistant.document_loader import load_documents
 from dotenv import load_dotenv
+from hr_assistant.logger import get_logger
 
 load_dotenv()
 
+logger = get_logger(__name__)
 
 # def split_into_chunks(chunk_size: int = config.CHUNK_SIZE, chunk_overlap: int = config.CHUNK_OVERLAP):
 #     """"split documents into small overlapping chunks"""
@@ -31,4 +33,5 @@ def split_into_chunks(documents):
         chunk_size = chunk_size,
         chunk_overlap = chunk_overlap
     )
+    logger.info("Split documents into %d chunks", len(text_splitter))
     return text_splitter.split_documents(documents)

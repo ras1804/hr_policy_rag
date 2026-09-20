@@ -1,0 +1,23 @@
+2026-09-19 21:35:38,950 | INFO | hr_assistant.pipeline | Building HR assistant
+2026-09-19 21:35:38,950 | INFO | hr_assistant.pipeline | Vector Store already exists
+2026-09-19 21:35:38,951 | INFO | hr_assistant.vector_store | Loading FAISS index from 'faiss_index'
+2026-09-19 21:35:38,951 | INFO | hr_assistant.embeddings | Initializing the embedding model jina-embeddings-v2-base-en
+2026-09-19 21:35:38,956 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-09-19 21:35:38,956 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-09-19 21:35:38,957 | INFO | faiss.loader | Loading faiss.
+2026-09-19 21:35:38,988 | INFO | faiss.loader | Successfully loaded faiss.
+2026-09-19 21:35:38,998 | INFO | hr_assistant.vector_store | Creating a retriever with top_k=3
+2026-09-19 21:35:39,001 | INFO | hr_assistant.llm | Initializing LLM openai/gpt-oss-20b
+2026-09-19 21:35:39,283 | INFO | hr_assistant.agent | Creating an HR agent with 1 tools
+2026-09-19 21:35:39,290 | INFO | hr_assistant.agent | HR agent ready
+2026-09-19 21:35:39,290 | INFO | hr_assistant.pipeline | HR assistant is ready to take questions
+2026-09-19 21:35:53,742 | INFO | __main__ | Streamlit run: new question received
+2026-09-19 21:35:53,744 | INFO | hr_assistant.pipeline | User question: hello how are you
+2026-09-19 21:35:54,067 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-19 21:36:10,145 | INFO | __main__ | Streamlit run: new question received
+2026-09-19 21:36:10,148 | INFO | hr_assistant.pipeline | User question: tell me about the leave policy
+2026-09-19 21:36:10,658 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-19 21:36:10,663 | INFO | hr_assistant.tools | search_hr_policy called with query: leave policy
+2026-09-19 21:36:11,395 | INFO | hr_assistant.tools | Found 3 matching chunks
+2026-09-19 21:36:12,189 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
