@@ -58,3 +58,20 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
 2026-09-20 10:42:34,655 | INFO | hr_assistant.tools | search_hr_policy called with query: work from home policy
 2026-09-20 10:42:35,801 | INFO | hr_assistant.tools | Found 3 matching chunks
 2026-09-20 10:42:36,882 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-20 10:59:00,681 | INFO | hr_assistant.pipeline | Building HR assistant
+2026-09-20 10:59:00,683 | INFO | hr_assistant.pipeline | Vector Store already exists
+2026-09-20 10:59:00,683 | INFO | hr_assistant.vector_store | Loading FAISS index from 'faiss_index'
+2026-09-20 10:59:00,684 | INFO | hr_assistant.embeddings | Initializing the embedding model jina-embeddings-v2-base-en
+2026-09-20 10:59:00,690 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-09-20 10:59:00,690 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-09-20 10:59:00,691 | INFO | faiss.loader | Loading faiss.
+2026-09-20 10:59:00,729 | INFO | faiss.loader | Successfully loaded faiss.
+2026-09-20 10:59:00,747 | INFO | hr_assistant.vector_store | Creating a retriever with top_k=3
+2026-09-20 10:59:00,752 | INFO | hr_assistant.llm | Initializing LLM openai/gpt-oss-20b
+2026-09-20 10:59:01,062 | INFO | hr_assistant.agent | Creating an HR agent with 1 tools
+2026-09-20 10:59:01,070 | INFO | hr_assistant.agent | HR agent ready
+2026-09-20 10:59:01,070 | INFO | hr_assistant.pipeline | HR assistant is ready to take questions
+2026-09-20 10:59:28,071 | INFO | __main__ | Streamlit run: new question received
+2026-09-20 10:59:28,074 | INFO | hr_assistant.pipeline | User question: hi how are you
+2026-09-20 10:59:28,935 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
