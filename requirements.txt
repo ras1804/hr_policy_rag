@@ -1,21 +1,48 @@
 python-dotenv
 
-langchain
-langchain-core
+# framework / technology for ai agents
+langchain 
+langchain-core 
 langchain-community
 
 
-# LLM Provider
+## LLM PROVIDER 
+
 langchain-groq
-langchain-text-splitters 
+langchain-text-splitters
 
 
-# vector database
-faiss-cpu
+# vector store
+
+langchain-qdrant
+qdrant-client
 
 
+# notebook
 jupyter
 ipykernel
 
 
+# web app 
+
 streamlit
+
+# LLM gateways
+
+portkey-ai
+langchain-openai
+
+
+
+
+# evaluations 
+
+openevals
+
+
+langchain-qdrant 
+qdrant-client
+
+
+langchain-openai 
+portkey-ai
